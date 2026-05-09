@@ -20,6 +20,15 @@
       name="twitter:description"
       content="AI、創作、学習、発信を作りながら積み上げていく自己紹介サイトです。"
     />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMSHD401TH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XMSHD401TH");
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -37,7 +46,7 @@
     </header>
 
     <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
+      <section class="hero section-shell" id="hero" data-section="hero" aria-labelledby="hero-title">
         <div class="hero-content">
           <div class="avatar-placeholder" role="img" aria-label="Manbou / RockBox のアイコン用プレースホルダー">
             <span>M/R</span>
@@ -51,14 +60,14 @@
               まだ完成したものは多くありませんが、作りながら学ぶことを大事にしています。絵、サイト制作、資格勉強、SNS発信など、今やっていることをここにまとめていきます。
             </p>
             <div class="hero-actions" aria-label="ページ内リンク">
-              <a class="button primary" href="#activity">活動を見る</a>
-              <a class="button secondary" href="#links">リンクを見る</a>
+              <a class="button primary" href="#activity" data-track-cta="activity">活動を見る</a>
+              <a class="button secondary" href="#links" data-track-cta="links">リンクを見る</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <section class="about section-shell" id="about" data-section="about" aria-labelledby="about-title">
         <div class="section-heading">
           <h2 id="about-title">About</h2>
         </div>
@@ -79,7 +88,7 @@
         </div>
       </section>
 
-      <section class="activity section-shell" id="activity" aria-labelledby="activity-title">
+      <section class="activity section-shell" id="activity" data-section="activity" aria-labelledby="activity-title">
         <div class="section-heading">
           <h2 id="activity-title">Activity</h2>
           <p>今やっていることと、これから伸ばしていきたいこと。</p>
@@ -108,7 +117,7 @@
         </div>
       </section>
 
-      <section class="building section-shell" id="building" aria-labelledby="building-title">
+      <section class="building section-shell" id="building" data-section="building" aria-labelledby="building-title">
         <div class="section-heading">
           <h2 id="building-title">Now Building</h2>
           <p>完成済みの実績ではなく、これから作って育てていくものです。このサイト自体も、最初の成果物として少しずつ更新していきます。</p>
@@ -123,34 +132,34 @@
         </ul>
       </section>
 
-      <section class="links section-shell" id="links" aria-labelledby="links-title">
+      <section class="links section-shell" id="links" data-section="links" aria-labelledby="links-title">
         <div class="section-heading">
           <h2 id="links-title">Links</h2>
           <p>SNSや制作物のリンクをここにまとめていきます。</p>
         </div>
         <div class="link-grid">
-          <a class="link-card" href="https://x.com/LegendManbou" target="_blank" rel="noopener noreferrer" data-link="hobby-x" aria-label="趣味Xを開く">
+          <a class="link-card" href="https://x.com/LegendManbou" target="_blank" rel="noopener noreferrer" data-link="hobby-x" data-track-link="hobby_x" aria-label="趣味Xを開く">
             <span class="link-icon" aria-hidden="true">X</span>
             <span class="link-card-text">
               <span class="link-title">趣味X</span>
               <small>Creative / Hobby</small>
             </span>
           </a>
-          <a class="link-card" href="https://x.com/MBRockBox" target="_blank" rel="noopener noreferrer" data-link="rockbox" aria-label="RockBoxを開く">
+          <a class="link-card" href="https://x.com/MBRockBox" target="_blank" rel="noopener noreferrer" data-link="rockbox" data-track-link="rockbox" aria-label="RockBoxを開く">
             <span class="link-icon" aria-hidden="true">R</span>
             <span class="link-card-text">
               <span class="link-title">RockBox</span>
               <small>AI / Learning / Work</small>
             </span>
           </a>
-          <a class="link-card" href="https://github.com/LegendManbou" target="_blank" rel="noopener noreferrer" data-link="github" aria-label="GitHubを開く">
+          <a class="link-card" href="https://github.com/LegendManbou" target="_blank" rel="noopener noreferrer" data-link="github" data-track-link="github" aria-label="GitHubを開く">
             <span class="link-icon" aria-hidden="true">G</span>
             <span class="link-card-text">
               <span class="link-title">GitHub</span>
               <small>Code and practice</small>
             </span>
           </a>
-          <a class="link-card muted coming-soon" href="#" data-link="youtube" data-status="coming-soon" aria-label="YouTube Coming Soon（準備中）" aria-disabled="true">
+          <a class="link-card muted coming-soon" href="#" data-link="youtube" data-track-link="youtube_coming_soon" data-status="coming-soon" aria-label="YouTube Coming Soon（準備中）" aria-disabled="true">
             <span class="link-icon" aria-hidden="true">Y</span>
             <span class="link-card-text">
               <span class="link-title">YouTube Coming Soon</span>
@@ -158,7 +167,7 @@
             </span>
             <span class="link-status" aria-hidden="true">Coming Soon</span>
           </a>
-          <a class="link-card muted coming-soon" href="#" data-link="tiktok" data-status="coming-soon" aria-label="TikTok Coming Soon（準備中）" aria-disabled="true">
+          <a class="link-card muted coming-soon" href="#" data-link="tiktok" data-track-link="tiktok_coming_soon" data-status="coming-soon" aria-label="TikTok Coming Soon（準備中）" aria-disabled="true">
             <span class="link-icon" aria-hidden="true">T</span>
             <span class="link-card-text">
               <span class="link-title">TikTok Coming Soon</span>
